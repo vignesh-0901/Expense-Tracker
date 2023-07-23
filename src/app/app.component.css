@@ -1,0 +1,13 @@
+mat-toolbar {
+    justify-content: space-between;
+    color: black;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 1000;
+    background: rgb(230,237,245);
+    background: linear-gradient(90deg, rgba(230,237,245,1) 0%, rgba(149,203,248,1) 100%, rgba(33,149,235,1) 100%);
+  }
+  div{
+    background-color:white;
+  }

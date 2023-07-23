@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "vhchat-app": {
+      "hosting": {
+        "chat-app": [
+          "vhchat-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "vhchat-app"
+  }
+}

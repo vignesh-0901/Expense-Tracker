@@ -1,0 +1,90 @@
+mat-card {
+    background-color: rgba(230, 237, 245, 1);
+    border-radius: 20px;
+}
+mat-toolbar{
+    background-color: rgba(230, 237, 245, 1);
+}
+
+mat-form-field{
+    height: 80px;
+}
+
+.inputCard {
+    margin: 20px;
+    height: fit-content; 
+}
+
+.inputCardHeader {
+    justify-content: space-around; 
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.inputCardContent{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.inputButton{
+    
+    border-radius: 20px;
+}
+
+.displayCardParent{
+    margin-top: 10px;
+    width: 100%;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    background-color: white;
+}
+
+.displayToolbar{
+    justify-content: space-evenly;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+    /* background: rgb(255,255,255);
+    background: linear-gradient(94deg, rgba(255,255,255,1) 0%, rgba(145,36,242,1) 60%);
+     */
+}
+
+.chartCard{
+    background-color:rgba(230, 237, 245, 1);
+    width: 400px;
+    margin: 10px;
+    height: 360px;
+    
+}
+
+.displayCard{
+    width: 55%;
+    margin: 10px;
+}
+
+.monthButton{
+    
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 5px
+}
+
+.deleteButton{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+    background-color:rgba(230, 237, 245, 1);
+    border-radius: 20px;
+    height: 30px;
+    width: 50px;
+}
+
+@media (max-width:850px){
+    
+    .displayCard{
+        width: 100%;
+    }
+}

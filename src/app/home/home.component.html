@@ -1,0 +1,108 @@
+
+<mat-card class="inputCard mat-elevation-z5" >
+  <mat-card-header class="inputCardHeader" >
+    <mat-card-title style="color: rgb(71 85 105/var(--tw-text-opacity));">
+      ADD EXPENSES:
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="inputCardContent " >
+    <mat-form-field  style="width: 200px;">
+      <mat-label style="color: rgb(71 85 105/var(--tw-text-opacity));">Months</mat-label>
+      <mat-select [(ngModel)]="mon"  >
+        <mat-option class="monInput" *ngFor="let m of month" [value]="m">{{m}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field style="width: 200px;">
+        <mat-label style="color: rgb(71 85 105/var(--tw-text-opacity));">Pick a Year</mat-label>
+        <input matInput [formControl]="year" [matDatepicker]="picker" placeholder="Choose a Year">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" startView="multi-year" (yearSelected)="yearHandle($event,picker)" ></mat-datepicker>
+    </mat-form-field>
+     <form  [formGroup]="expenseForm" (ngSubmit)="addExpense()" style="width: 60%; display: flex;flex-wrap:wrap; justify-content:  space-evenly;">
+      <div>
+        <mat-form-field >
+        <mat-label  style="color: rgb(71 85 105/var(--tw-text-opacity));">Amount</mat-label>
+        <input formControlName="amount" matInput >
+      </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field >
+        <mat-label style="color: rgb(71 85 105/var(--tw-text-opacity));">Description</mat-label>
+        <input formControlName="description" matInput >
+      </mat-form-field>
+      </div>
+    <div >
+      <button class="inputButton" mat-raised-button >Add Expense</button>
+    </div>      
+      
+    </form>       
+    
+  </mat-card-content> 
+</mat-card>
+
+  
+<mat-toolbar class="displayToolbar" >
+    <mat-form-field style="margin-top: 20px;">
+      
+      <mat-label style="color: rgb(71 85 105/var(--tw-text-opacity));">Pick a Year</mat-label>
+      <input matInput [formControl]="disyear" [matDatepicker]="dispicker"  >
+      <mat-datepicker-toggle matIconSuffix [for]="dispicker"></mat-datepicker-toggle>
+      <mat-datepicker #dispicker style="background-color: slategrey;" startView="year" startView="multi-year" (yearSelected)="disyearHandle($event,dispicker)" ></mat-datepicker>
+    
+    </mat-form-field>
+      <button mat-raised-button class="monthButton" *ngFor="let i of month" (click)="select(i)">{{i}}</button>
+    
+  </mat-toolbar>
+  <div class="displayCardParent">
+
+    <mat-card class="chartCard">
+      
+      <canvas baseChart height="350px" width="390px" id="lchart"></canvas>
+      
+    </mat-card >
+    
+      <mat-card class="displayCard" >
+        <div *ngIf="this.selectedMonth; else notSelected ">
+
+          <mat-card-header style="justify-content: space-around;">
+            <mat-card-title style="font-size: xx-large;justify-content: space-around;display: flex;color: rgb(71 85 105/var(--tw-text-opacity));margin-bottom: 10px;">
+              {{this.selectedMonth}}
+            </mat-card-title>
+            <mat-card-title>
+              <p *ngFor="let i of q$" >
+                <mat-card style=" display: flex; width:390px;background-color: white;color: rgb(71 85 105/var(--tw-text-opacity));">
+                  
+                  <mat-card-content style="display: flex; justify-content:space-evenly;">
+                    <mat-card-title>
+                      {{i.description}}
+              </mat-card-title>
+              <mat-card-title>
+                :
+                {{i.amount}}           
+              </mat-card-title>
+              
+              <button mat-button class="deleteButton" (click)="del(i)" >Delete</button>
+            </mat-card-content>
+          </mat-card>
+        </p>
+      </mat-card-title>
+    </mat-card-header>
+    
+  </div>
+  
+  </mat-card>
+      
+  </div>
+
+  <ng-template #notSelected>
+
+    <mat-card-header style="display: flex; justify-content: center; width: 100%;" >
+      <mat-card-title style="color: rgb(71 85 105);">
+        Select Year and Month to Display EXPENSES.
+      </mat-card-title>
+    </mat-card-header>
+  </ng-template>
+      
+  
+  

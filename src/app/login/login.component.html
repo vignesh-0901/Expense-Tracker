@@ -1,0 +1,28 @@
+<div class="formContainer mat-elevation-z5 margin-top" style="background-color: rgba(230, 237, 245, 1);">
+    <h1 style="color: rgb(71 85 105/var(--tw-text-opacity));">Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-form-field>
+        <input matInput placeholder="Email Address" formControlName="email" type="email">
+        <mat-error *ngIf="email?.errors?.['required']">
+            Email required!!
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+            Enter a valid Email!!
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password': 'text'">
+        <mat-icon matSuffix (click)="hide=!hide">
+            {{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="password?.errors?.['required']">
+            Password required!!
+        </mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="center margin-top" >
+        Login
+    </button>
+    <span class="center margin-top text-center" style="color:rgb(71 85 105/var(--tw-text-opacity)) ;">New User? <a routerLink="/signup" style="margin-left: 10px;">Sign Up!</a></span>
+</form>
+</div>
+<!-- rgba(230, 237, 245, 1) -->

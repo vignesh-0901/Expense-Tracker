@@ -1,0 +1,41 @@
+<div class="formContainer mat-elevation-z5 margin-top" style="background-color: rgba(230, 237, 245, 1);">
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+        <h1 style="color: rgb(71 85 105/var(--tw-text-opacity));">SignUp</h1>
+        <mat-form-field>
+            <input matInput placeholder="Username" formControlName="name">
+            <mat-error *ngIf="name?.errors?.['required']">
+                Username required!!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">
+                Email required!!
+            </mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">
+                Enter a valid Email!!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Password" formControlName="password" [type]="phide?'password':'text'">
+            <mat-icon matSuffix (click)="phide=!phide">
+                {{phide?'visibility_off':'visibility'}}
+            </mat-icon>
+            <mat-error *ngIf="password?.errors?.['required']">
+                Password required!!
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Confirm Password" formControlName="confirmPassword" [type]="cphide?'password':'text'">
+            <mat-icon matSuffix (click)="cphide=!cphide">{{cphide? 'visibility_off': 'visibility'}}</mat-icon>
+            <mat-error *ngIf="email?.errors?.['required']">
+                Cannot be empty!
+            </mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="signUpForm?.errors?.['passwordnotmatch']">
+            Passwords dont't match!!     
+        </mat-error>
+        <button mat-raised-button class="center margin-top" >Register</button>
+        <span class="center text-center margin-top" style="color: rgb(71 85 105/var(--tw-text-opacity));">Registered User?<a routerLink="/" style="margin-left: 10px;">Login</a></span>
+    </form>
+</div>
