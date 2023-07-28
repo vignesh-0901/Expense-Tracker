@@ -6,9 +6,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This is an [PERSONAL EXPENSE TRACKING website](https://personal-expense.web.app/)  in which every user can signup, login and track their expenses by adding it according to months.
 - Do check it out at https://personal-expense.web.app/
-- To check the website for demo use:
- `email` as demo@gmail.com and `password` as "demouser"
+- To check the website for demo, use:<br> `email` : demo@gmail.com <br> `password` : "demouser"
 
+## Contributing
+
+See something that's wrong or unclear?, Pull requests are welcome 😀
+
+Read the [contributing guide](https://github.com/vignesh-0901/Expense-Tracker/blob/main/CONTRIBUTION.md) to learn how you can take part in
+improving ```Expense-Tracker```
 
 ## Development server
 
