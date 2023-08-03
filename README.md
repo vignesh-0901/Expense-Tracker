@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
+## About
+
+This is an [PERSONAL EXPENSE TRACKING website](https://personal-expense.web.app/)  in which every user can signup, login and track their expenses by adding it according to months.
+- Do check it out at https://personal-expense.web.app/
+- To check the website for demo, use:<br> `email` : demo@gmail.com <br> `password` : "demouser"
+
 ## Techstack
 
 - `Angular` framework.
@@ -9,11 +15,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Firebase `Hosting`.
 - Firebase `Authentication`.
 
-## About
-
-This is an [PERSONAL EXPENSE TRACKING website](https://personal-expense.web.app/)  in which every user can signup, login and track their expenses by adding it according to months.
-- Do check it out at https://personal-expense.web.app/
-- To check the website for demo, use:<br> `email` : demo@gmail.com <br> `password` : "demouser"
 
 ## Contributing
 
