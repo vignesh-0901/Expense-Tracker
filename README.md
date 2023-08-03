@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
+
 ## About
 
 This is an [PERSONAL EXPENSE TRACKING website](https://personal-expense.web.app/)  in which every user can signup, login and track their expenses by adding it according to months.
@@ -15,9 +16,29 @@ See something that's wrong or unclear?, Pull requests are welcome 😀
 Read the [contributing guide](https://github.com/vignesh-0901/Expense-Tracker/blob/main/CONTRIBUTION.md) to learn how you can take part in
 improving ```Expense-Tracker```
 
-## Development server
+## Development
 
-Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Setup
+
+1. Clone the repo into a public GitHub repository (or fork this repo). If you plan to distribute the code, keep the source code public to comply with [MIT License](LICENSE).
+
+```sh 
+https://github.com/vignesh-0901/Expense-Tracker.git 
+```
+
+2. Go to the project folder.
+
+```sh
+cd Expense-Tracker
+```
+
+3. Install the packages with npm.
+
+```sh
+npm install
+```
+4. Run `ng serve` or `npm start` for a dev server. 
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
