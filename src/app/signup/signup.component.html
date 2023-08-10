@@ -35,7 +35,7 @@
         <mat-error *ngIf="signUpForm?.errors?.['passwordnotmatch']">
             Passwords dont't match!!     
         </mat-error>
-        <button mat-raised-button class="center margin-top" >Register</button>
+        <button mat-raised-button class="center margin-top" [disabled]="signUpForm?.errors">Register</button>
         <span class="center text-center margin-top" style="color: rgb(71 85 105/var(--tw-text-opacity));">Registered User?<a routerLink="/" style="margin-left: 10px;">Login</a></span>
     </form>
 </div>
